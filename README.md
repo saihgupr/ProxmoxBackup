@@ -23,7 +23,7 @@ This kit creates a single, self-contained Total Recovery Kit on a flash drive by
 Run the setup script on your Proxmox node. This installs dependencies (like `rear`), guides you through an interactive drive selection, and provisions a global custom command (`pve-strong-backup`):
 
 ```bash
-wget -O proxmox-backup-setup.sh https://raw.githubusercontent.com/saihgupr/ProxmoxBackup/main/proxmox-backup-setup.sh && sudo bash proxmox-backup-setup.sh
+wget -q -O proxmox-backup-setup.sh https://raw.githubusercontent.com/saihgupr/ProxmoxBackup/main/proxmox-backup-setup.sh && sudo bash proxmox-backup-setup.sh
 ```
 
 ### 2. Run the Backup (Update USB Data)
@@ -71,7 +71,7 @@ Once the host is back up, use the USB to restore your core orchestration utiliti
 ### Dry Run
 To test the environment and dependencies without writing backup data to a drive, download and execute the script with the dry-run flag:
 ```bash
-wget -O proxmox-backup-setup.sh https://raw.githubusercontent.com/saihgupr/ProxmoxBackup/main/proxmox-backup-setup.sh && sudo bash proxmox-backup-setup.sh --dry-run
+wget -q -O proxmox-backup-setup.sh https://raw.githubusercontent.com/saihgupr/ProxmoxBackup/main/proxmox-backup-setup.sh && sudo bash proxmox-backup-setup.sh --dry-run
 ```
 
 ### Manual Verification
